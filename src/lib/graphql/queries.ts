@@ -15,3 +15,32 @@ export const productsQuery = gql`
     }
   }
 `;
+
+export const productQuery = gql`
+  query Product($id: ID!) {
+    product(where: { id: $id }) {
+      id
+      name
+      description
+      price
+      categories {
+        id
+        name
+      }
+      images {
+        width
+        height
+        fileName
+        url
+      }
+      reviews {
+        id
+        rating
+        email
+        name
+        headline
+        content
+      }
+    }
+  }
+`;

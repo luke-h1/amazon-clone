@@ -1,7 +1,6 @@
 import { auth } from '@frontend/lib/firebase';
 import { useAppDispatch, useAppSelector } from '@frontend/store/hooks';
 import { signOutFromAccount } from '@frontend/store/reducers/userReducer';
-import { ShoppingCartOutlined } from '@mui/icons-material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -25,12 +24,12 @@ const Header = () => {
       auth.signOut();
       dispatch(signOutFromAccount());
     } else {
-      router.push("/login");
+      router.push('/login');
     }
   };
 
   return (
-     <Nav>
+    <Nav>
       <Link href="/">
         <Logo
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
@@ -49,7 +48,7 @@ const Header = () => {
         <Option>
           <OptionTopLine>Hello {user?.email}</OptionTopLine>
           <OptionBottomLine onClick={() => handleSignIn()}>
-            {user !== null ? "Sign Out" : "Sign in"}
+            {user !== null ? 'Sign Out' : 'Sign in'}
           </OptionBottomLine>
         </Option>
       </SignInLink>

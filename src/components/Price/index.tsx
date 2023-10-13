@@ -1,5 +1,5 @@
-import React from "react";
-import { Pence, PriceContainer } from "./styles";
+import React from 'react';
+import { Pence, PriceContainer } from './styles';
 
 interface IProps {
   itemPrice: number;
@@ -8,14 +8,14 @@ interface IProps {
 const Price = ({ itemPrice }: IProps) => {
   const handlePrice = () => {
     const convertToString = itemPrice.toString();
-    const convertToArray = convertToString.split("");
+    const convertToArray = convertToString.split('');
 
     // Remove last two items in array and convert to string
-    const getPoundsAmount = convertToArray.slice(0, -2).join("");
+    const getPoundsAmount = convertToArray.slice(0, -2).join('');
     // Get last two items in array and convert to string
     const getPenceAmount = convertToArray
       .splice(convertToArray.length - 2)
-      .join("");
+      .join('');
 
     return (
       <>

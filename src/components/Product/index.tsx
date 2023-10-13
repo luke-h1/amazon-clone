@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Title } from '@frontend/styles/shared';
+import AddToBasketButton from '../AddToBasketButton';
 import Price from '../Price';
 import Rating from '../Rating';
 import { Info, ProductContainer } from './styles';
@@ -20,6 +22,13 @@ const Product = ({ id, image, price, rating, title }: Props) => {
         <Price itemPrice={price} />
         <Rating ratingNumber={rating} />
       </Info>
+      <AddToBasketButton
+        id={id}
+        title={title}
+        price={price}
+        rating={rating}
+        image={image}
+      />
     </ProductContainer>
   );
 };

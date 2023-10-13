@@ -6,6 +6,7 @@ import {
   ProductRows,
 } from '@frontend/styles/home';
 import { Product as ProductType } from '@frontend/types/product';
+import Link from 'next/link';
 
 export default function Home() {
   const { data, error, loading } = useProducts();
@@ -23,8 +24,8 @@ export default function Home() {
       <BackgroundImg src="https://m.media-amazon.com/images/I/61xnEcip5RL._SX3000_.jpg" />
       <ProductRows>
         {data &&
-          data?.products?.map(
-            (product: ProductType) => (
+          data?.products?.map((product: ProductType) => (
+            <Link href={`/product/${product.id}`} key={product.id}>
               <Product
                 key={product.id}
                 id={product.id}
@@ -33,8 +34,8 @@ export default function Home() {
                 rating={product.rating}
                 title={product.title}
               />
-            ),
-          )}
+            </Link>
+          ))}
       </ProductRows>
     </HomeContainer>
   );
