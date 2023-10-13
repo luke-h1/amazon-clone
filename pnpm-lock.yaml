@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@apollo/client':
     specifier: ^3.7.3
-    version: 3.7.3(graphql@16.6.0)(react-dom@18.0.0)(react@18.0.0)
+    version: 3.7.3(graphql@16.8.1)(react-dom@18.0.0)(react@18.0.0)
   '@emotion/react':
     specifier: ^11.10.5
     version: 11.10.5(@babel/core@7.23.2)(@types/react@18.0.0)(react@18.0.0)
@@ -27,8 +27,8 @@ dependencies:
     specifier: ^9.15.0
     version: 9.15.0
   graphql:
-    specifier: ^16.6.0
-    version: 16.6.0
+    specifier: ^16.8.1
+    version: 16.8.1
   next:
     specifier: 13.5.4
     version: 13.5.4(@babel/core@7.23.2)(react-dom@18.0.0)(react@18.0.0)
@@ -46,7 +46,7 @@ dependencies:
     version: 4.2.0
   styled-components:
     specifier: ^5.3.5
-    version: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0)
+    version: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0)
 
 devDependencies:
   '@types/node':
@@ -122,7 +122,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.19
     dev: false
 
-  /@apollo/client@3.7.3(graphql@16.6.0)(react-dom@18.0.0)(react@18.0.0):
+  /@apollo/client@3.7.3(graphql@16.8.1)(react-dom@18.0.0)(react@18.0.0):
     resolution: {integrity: sha512-nzZ6d6a4flLpm3pZOGpuAUxLlp9heob7QcCkyIqZlCLvciUibgufRfYTwfkWCc4NaGHGSZyodzvfr79H6oUwGQ==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
@@ -140,12 +140,12 @@ packages:
       subscriptions-transport-ws:
         optional: true
     dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.6.0)
+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.8.1)
       '@wry/context': 0.7.3
       '@wry/equality': 0.5.6
       '@wry/trie': 0.3.2
-      graphql: 16.6.0
-      graphql-tag: 2.12.6(graphql@16.6.0)
+      graphql: 16.8.1
+      graphql-tag: 2.12.6(graphql@16.8.1)
       hoist-non-react-statics: 3.3.2
       optimism: 0.16.2
       prop-types: 15.8.1
@@ -1007,12 +1007,12 @@ packages:
     resolution: {integrity: sha512-BpiZLBWdLFw+qFel9p3Zs1jD6QmH7Ii4aTDu6+vx8ShdidChZUXqDhYJly4ZjSgQh54miXbBgBrk0S+jTIh/Qg==}
     dev: false
 
-  /@graphql-typed-document-node/core@3.2.0(graphql@16.6.0):
+  /@graphql-typed-document-node/core@3.2.0(graphql@16.8.1):
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
-      graphql: 16.6.0
+      graphql: 16.8.1
     dev: false
 
   /@grpc/grpc-js@1.7.3:
@@ -1911,7 +1911,7 @@ packages:
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.23.2)
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0)
+      styled-components: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0)
     transitivePeerDependencies:
       - '@babel/core'
     dev: false
@@ -2928,18 +2928,18 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
 
-  /graphql-tag@2.12.6(graphql@16.6.0):
+  /graphql-tag@2.12.6(graphql@16.8.1):
     resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
     engines: {node: '>=10'}
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
-      graphql: 16.6.0
+      graphql: 16.8.1
       tslib: 2.6.2
     dev: false
 
-  /graphql@16.6.0:
-    resolution: {integrity: sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==}
+  /graphql@16.8.1:
+    resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: false
 
@@ -4165,7 +4165,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-components@5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0):
+  /styled-components@5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0):
     resolution: {integrity: sha512-ndETJ9RKaaL6q41B69WudeqLzOpY1A/ET/glXkNZ2T7dPjPqpPCXXQjDFYZWwNnE5co0wX+gTCqx9mfxTmSIPg==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -4184,7 +4184,7 @@ packages:
       hoist-non-react-statics: 3.3.2
       react: 18.0.0
       react-dom: 18.0.0(react@18.0.0)
-      react-is: 16.13.1
+      react-is: 18.2.0
       shallowequal: 1.1.0
       supports-color: 5.5.0
     transitivePeerDependencies:
