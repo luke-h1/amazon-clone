@@ -1,4 +1,4 @@
-import Header from '@frontend/components';
+import Header from '@frontend/components/Header';
 import GlobalStyle from '@frontend/styles/global';
 import type { AppProps } from 'next/app';
 import { DefaultTheme, ThemeProvider } from 'styled-components';

@@ -1,5 +1,6 @@
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
@@ -54,4 +55,27 @@ export const OptionTopLine = styled.span`
 export const OptionBottomLine = styled.span`
   font-size: 13px;
   font-weight: 800;
+`;
+
+export const Basket = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const BasketCounter = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.orange};
+  font-weight: 500;
+`;
+
+export const SignInLink = styled.div`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
+`;
+
+export const CheckoutLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white};
 `;

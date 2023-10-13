@@ -46,7 +46,7 @@ dependencies:
     version: 4.2.0
   styled-components:
     specifier: ^5.3.5
-    version: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0)
+    version: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0)
 
 devDependencies:
   '@types/node':
@@ -1911,7 +1911,7 @@ packages:
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.23.2)
       lodash: 4.17.21
       picomatch: 2.3.1
-      styled-components: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0)
+      styled-components: 5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0)
     transitivePeerDependencies:
       - '@babel/core'
     dev: false
@@ -4165,7 +4165,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-components@5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@16.13.1)(react@18.0.0):
+  /styled-components@5.3.5(@babel/core@7.23.2)(react-dom@18.0.0)(react-is@18.2.0)(react@18.0.0):
     resolution: {integrity: sha512-ndETJ9RKaaL6q41B69WudeqLzOpY1A/ET/glXkNZ2T7dPjPqpPCXXQjDFYZWwNnE5co0wX+gTCqx9mfxTmSIPg==}
     engines: {node: '>=10'}
     requiresBuild: true
@@ -4184,7 +4184,7 @@ packages:
       hoist-non-react-statics: 3.3.2
       react: 18.0.0
       react-dom: 18.0.0(react@18.0.0)
-      react-is: 16.13.1
+      react-is: 18.2.0
       shallowequal: 1.1.0
       supports-color: 5.5.0
     transitivePeerDependencies:

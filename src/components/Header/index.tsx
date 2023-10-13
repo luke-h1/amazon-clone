@@ -1,3 +1,4 @@
+import { ShoppingCartOutlined } from '@mui/icons-material';
 import Link from 'next/link';
 import {
   Option,
@@ -8,6 +9,10 @@ import {
   SearchBox,
   SearchIconButton,
   SearchInput,
+  Basket,
+  BasketCounter,
+  SignInLink,
+  CheckoutLink,
 } from './styles';
 
 const Header = () => {
@@ -25,14 +30,22 @@ const Header = () => {
         <SearchInput type="text" />
         <SearchIconButton />
       </SearchBox>
+      <SignInLink>
+        <Option>
+          <OptionTopLine>Hello</OptionTopLine>
+          <OptionBottomLine>Sign in</OptionBottomLine>
+        </Option>
+      </SignInLink>
       <Option>
         <OptionTopLine>Returns</OptionTopLine>
         <OptionBottomLine>& Orders</OptionBottomLine>
       </Option>
-      <Option>
-        <OptionTopLine>Hello</OptionTopLine>
-        <OptionBottomLine>Sign in</OptionBottomLine>
-      </Option>
+      <CheckoutLink href="/checkout">
+        <Basket>
+          <ShoppingCartOutlined />
+          <BasketCounter>0</BasketCounter>
+        </Basket>
+      </CheckoutLink>
     </Nav>
   );
 };
