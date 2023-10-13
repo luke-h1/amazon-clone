@@ -1,3 +1,5 @@
+import { Container } from '@frontend/styles/shared';
+
 export default function Home() {
-  return <>YIPEEEEEEEEE</>;
+  return <Container>yipee</Container>;
 }
