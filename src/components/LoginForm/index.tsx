@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { auth } from '@frontend/lib/firebase';
+import { useAppDispatch } from '@frontend/store/hooks';
+import { signInToAccount } from '@frontend/store/reducers/userReducer';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useRouter } from 'next/router';
 import { FormEvent, useState } from 'react';
@@ -11,6 +13,7 @@ interface FormState {
 }
 
 const LoginForm = () => {
+    const dispatch = useAppDispatch();
     const router = useRouter();
     const [formState, setFormState] = useState<FormState>({
         email: '',
@@ -21,6 +24,7 @@ const LoginForm = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, formState.email, formState.password).then(
             user => {
+                dispatch(signInToAccount(user.user))
                 router.push('/')
             },
             // eslint-disable-next-line no-shadow
@@ -34,6 +38,7 @@ const LoginForm = () => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, formState.email, formState.password).then(
             user => {
+                dispatch(signInToAccount(user.user))
                 router.push('/')
             },
             // eslint-disable-next-line no-shadow

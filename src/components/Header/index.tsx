@@ -1,5 +1,9 @@
+import { auth } from '@frontend/lib/firebase';
+import { useAppDispatch, useAppSelector } from '@frontend/store/hooks';
+import { signOutFromAccount } from '@frontend/store/reducers/userReducer';
 import { ShoppingCartOutlined } from '@mui/icons-material';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   Option,
   Logo,
@@ -9,43 +13,51 @@ import {
   SearchBox,
   SearchIconButton,
   SearchInput,
-  Basket,
-  BasketCounter,
   SignInLink,
-  CheckoutLink,
 } from './styles';
 
 const Header = () => {
+  const user = useAppSelector(state => state.user.user);
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+  const handleSignIn = () => {
+    if (user !== null) {
+      auth.signOut();
+      dispatch(signOutFromAccount());
+    } else {
+      router.push("/login");
+    }
+  };
+
   return (
-    <Nav>
+     <Nav>
       <Link href="/">
         <Logo
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           alt="Amazon Logo"
-          width={75}
-          height={75}
+          width={100}
+          height={100}
         />
       </Link>
+
       <SearchBox>
         <SearchInput type="text" />
         <SearchIconButton />
       </SearchBox>
+
       <SignInLink>
         <Option>
-          <OptionTopLine>Hello</OptionTopLine>
-          <OptionBottomLine>Sign in</OptionBottomLine>
+          <OptionTopLine>Hello {user?.email}</OptionTopLine>
+          <OptionBottomLine onClick={() => handleSignIn()}>
+            {user !== null ? "Sign Out" : "Sign in"}
+          </OptionBottomLine>
         </Option>
       </SignInLink>
+
       <Option>
         <OptionTopLine>Returns</OptionTopLine>
         <OptionBottomLine>& Orders</OptionBottomLine>
       </Option>
-      <CheckoutLink href="/checkout">
-        <Basket>
-          <ShoppingCartOutlined />
-          <BasketCounter>0</BasketCounter>
-        </Basket>
-      </CheckoutLink>
     </Nav>
   );
 };
